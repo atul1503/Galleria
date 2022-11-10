@@ -1,0 +1,1 @@
+INSERT INTO User VALUES ("araskin","justinaraskin",55);
