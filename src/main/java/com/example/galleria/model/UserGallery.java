@@ -1,10 +1,12 @@
 package com.example.galleria.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Table
-@Entity
+@Entity(name="UserGallery")
 public class UserGallery {
 	
 	@Column
@@ -12,7 +14,7 @@ public class UserGallery {
 	
 	@Id
 	@Column
-	private String url;
+	private String imageid;
 
 	public String getUsername() {
 		return username;
@@ -22,13 +24,14 @@ public class UserGallery {
 		this.username = username;
 	}
 
-	public String getUrl() {
-		return url;
+	public String getImageid() {
+		return imageid;
 	}
 
-	public void setUrl(String url) {
-		this.url = url;
+	public void setImageid(String imageid) {
+		this.imageid = imageid;
 	}
-	
+
+		
 	
 }

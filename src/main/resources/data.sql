@@ -1,1 +1,1 @@
-INSERT INTO User VALUES ("araskin","justinaraskin",55);
+INSERT INTO Users VALUES ('araskin','justinaraskin',55);

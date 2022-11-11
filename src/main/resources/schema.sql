@@ -1,15 +1,12 @@
-CREATE TABLE IF EXISTS User;
-CREATE TABLE IF EXISTS UserGallery;
 
-CREATE TABLE User (
-username VARCHAR(30) PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS  users  (username VARCHAR(30) PRIMARY KEY,
 password VARCHAR(30) NOT NULL,
-age INT(3) NOT NULL
+age INTEGER NOT NULL
 );
 
 
-CREATE TABLE UserGallery (
+CREATE TABLE IF NOT EXISTS  UserGallery (
 username VARCHAR(30),
-url VARCHAR(300),
-foreign key (username) references User(username)
+imageid VARCHAR(300),
+foreign key (username) references users(username)
 );
