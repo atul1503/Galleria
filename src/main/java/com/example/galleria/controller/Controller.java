@@ -93,7 +93,7 @@ Image image=null;
 }
 
 @DeleteMapping("/image")
-public void deleteImage(@RequestParam String id) {
+public void deleteImage(@RequestParam(name="imageid") String id) {
 	galleryrepo.deleteById(id);
 }
 
