@@ -15,3 +15,9 @@ GET /image : expects a query param as the {imageid} . returns the image object.
 DELETE /image : expects a query param as the {imageid}. Deltes the image for this user.
 
 
+
+---------------------------
+
+It makes use of the imgur api to store images of each user registered in the database of rest service.
+
+
