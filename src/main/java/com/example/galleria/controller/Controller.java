@@ -1,5 +1,6 @@
 package com.example.galleria.controller;
 
+import com.example.galleria.model.UserGallery;
 import com.github.kskelm.baringo.model.Image;
 import com.github.kskelm.baringo.util.BaringoApiException;
 import com.github.kskelm.baringo.BaringoClient;
@@ -82,7 +83,7 @@ Image image=null;
 	
 	try {
 	      image = client.imageService().uploadLocalImage( null,imgup.getFileName(),null,null,null );
-	      
+	      galleryrepo.save(new UserGallery(imgup.getUsername(),image.getId()));
 	      return image;
 	    } catch (Exception e) {
 	      e.printStackTrace();

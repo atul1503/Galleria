@@ -15,6 +15,11 @@ public class UserGallery {
 	@Id
 	@Column
 	private String imageid;
+	
+	public UserGallery(String username,String imageid) {
+		this.username=username;
+		this.imageid=imageid;
+	}
 
 	public String getUsername() {
 		return username;
